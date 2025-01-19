@@ -22,7 +22,7 @@ jobs:
         node-version: '20'
 
     - name: Build Theme
-      working-directory: ./wp-content/themes/paceaux3
+      working-directory: ./wp-content/themes/happyfeetk9
       run: |
         npm ci
         npm run styles:build
