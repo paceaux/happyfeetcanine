@@ -2,11 +2,63 @@
  * Theme Name:  Happy Feet k9
  * Theme URI:   http://HappyFeetCanine.com
  * Description: Happy Feet Canine is a subtheme of Welsh Corgi.
- * Version:     1.0.5
+ * Version:     1.0.11
+ * version of engine: 1.0.35
  * Author:      Frank M. Taylor
  * Author URI:  http://frankmtaylor.com
- * Tags:        white, light, silver, gray, pink, purple, responsive-layout, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, flexible-header, theme-options, translation-ready, photoblogging
- * Text Domain: drop-shipping, hybrid-core
+ * Tags:        flexible-header, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, full-width-template, microformats, post-formats, theme-options, threaded-comments, translation-ready
+ * Text Domain: welsh-corgi
  * License:     GNU General Public License v2.0 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
+
+.wp-block-group-is-layout-constrained {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+h1.sc_layouts_title_caption {
+    color: rgb(52, 52, 52)
+}
+
+@media screen and (width >=600px) {
+    .wp-block-group.nfd-container.nfd-bg-surface.has-background,
+    [id="testimonials"],
+    .wp-block-group.nfd-container.nfd-bg-surface.nfd-p-lg {
+        justify-self: center;
+    }
+}
+
+.sc_layouts_title_breadcrumbs {
+    display: none;
+}
+
+.wp-block-heading.has-text-align-center {
+    padding: 0 1.618rem;
+}
+
+.wp-block-group + .wp-block-buttons {
+    margin-top: 1.618rem;
+}
+
+/* collection of certifications at the bottom of the page; need to keep images from being cut off. was set to normal, which stretched */
+
+figure.wp-block-gallery.has-nested-images.wp-block-gallery-is-layout-flex {
+    align-items: center;
+}
+
+/* image certifications on the homepage. They're getting width set as inline style. ugh.  */
+.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) img {
+    width: 100% !important;
+}
+
+
+
+mark.has-inline-color {
+    padding: .618em;
+    border-radius: 10px;
+}
+
+.wp-image-196 {
+    clip-path: ellipse(100% 44% at 50% 56%);
+}
