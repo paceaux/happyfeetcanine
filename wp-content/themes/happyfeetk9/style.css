@@ -2,11 +2,64 @@
  * Theme Name:  Happy Feet k9
  * Theme URI:   http://HappyFeetCanine.com
  * Description: Happy Feet Canine is a subtheme of Welsh Corgi.
- * Version:     1.0.5
+ * Version:     1.0.11
+ * version of engine: 1.0.35
  * Author:      Frank M. Taylor
  * Author URI:  http://frankmtaylor.com
- * Tags:        white, light, silver, gray, pink, purple, responsive-layout, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, flexible-header, theme-options, translation-ready, photoblogging
- * Text Domain: drop-shipping, hybrid-core
+ * Tags:        flexible-header, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, full-width-template, microformats, post-formats, theme-options, threaded-comments, translation-ready
+ * Text Domain: welsh-corgi
  * License:     GNU General Public License v2.0 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
+
+.wp-block-group-is-layout-constrained {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+h1.sc_layouts_title_caption {
+    color: rgb(52, 52, 52)
+}
+
+@media screen and (width >=600px) {
+    .wp-block-group.nfd-container.nfd-bg-surface.has-background,
+    [id="testimonials"],
+    .wp-block-group.nfd-container.nfd-bg-surface.nfd-p-lg {
+        justify-self: center;
+    }
+}
+
+.sc_layouts_title_breadcrumbs {
+    display: none;
+}
+
+.wp-block-heading.has-text-align-center {
+    padding: 0 1.618rem;
+}
+
+.wp-block-group + .wp-block-buttons {
+    margin-top: 1.618rem;
+}
+
+/* collection of certifications at the bottom of the page; need to keep images from being cut off. was set to normal, which stretched */
+
+figure.wp-block-gallery.has-nested-images.wp-block-gallery-is-layout-flex {
+    align-items: center;
+}
+
+/* image certifications on the homepage. They're getting width set as inline style. ugh.  */
+.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) img {
+    width: 100% !important;
+}
+
+
+
+mark.has-inline-color {
+    padding: .618em;
+    border-radius: 10px;
+}
+
+.wp-image-196 {
+    clip-path: ellipse(100% 44% at 50% 56%);
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMvbWFpbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBUaGVtZSBOYW1lOiAgSGFwcHkgRmVldCBrOVxuICogVGhlbWUgVVJJOiAgIGh0dHA6Ly9IYXBweUZlZXRDYW5pbmUuY29tXG4gKiBEZXNjcmlwdGlvbjogSGFwcHkgRmVldCBDYW5pbmUgaXMgYSBzdWJ0aGVtZSBvZiBXZWxzaCBDb3JnaS5cbiAqIFZlcnNpb246ICAgICAxLjAuMTFcbiAqIHZlcnNpb24gb2YgZW5naW5lOiAxLjAuMzVcbiAqIEF1dGhvcjogICAgICBGcmFuayBNLiBUYXlsb3JcbiAqIEF1dGhvciBVUkk6ICBodHRwOi8vZnJhbmttdGF5bG9yLmNvbVxuICogVGFnczogICAgICAgIGZsZXhpYmxlLWhlYWRlciwgY3VzdG9tLWJhY2tncm91bmQsIGN1c3RvbS1jb2xvcnMsIGN1c3RvbS1oZWFkZXIsIGN1c3RvbS1tZW51LCBmZWF0dXJlZC1pbWFnZS1oZWFkZXIsIGZlYXR1cmVkLWltYWdlcywgZnVsbC13aWR0aC10ZW1wbGF0ZSwgbWljcm9mb3JtYXRzLCBwb3N0LWZvcm1hdHMsIHRoZW1lLW9wdGlvbnMsIHRocmVhZGVkLWNvbW1lbnRzLCB0cmFuc2xhdGlvbi1yZWFkeVxuICogVGV4dCBEb21haW46IHdlbHNoLWNvcmdpXG4gKiBMaWNlbnNlOiAgICAgR05VIEdlbmVyYWwgUHVibGljIExpY2Vuc2UgdjIuMCBvciBsYXRlclxuICogTGljZW5zZSBVUkk6IGh0dHA6Ly93d3cuZ251Lm9yZy9saWNlbnNlcy9ncGwtMi4wLmh0bWxcbiAqL1xuXG4ud3AtYmxvY2stZ3JvdXAtaXMtbGF5b3V0LWNvbnN0cmFpbmVkIHtcbiAgICBtYXJnaW4tcmlnaHQ6IDJyZW07XG4gICAgbWFyZ2luLWxlZnQ6IDJyZW07XG59XG5cbmgxLnNjX2xheW91dHNfdGl0bGVfY2FwdGlvbiB7XG4gICAgY29sb3I6IHJnYig1MiwgNTIsIDUyKVxufVxuXG5AbWVkaWEgc2NyZWVuIGFuZCAod2lkdGggPj02MDBweCkge1xuICAgIC53cC1ibG9jay1ncm91cC5uZmQtY29udGFpbmVyLm5mZC1iZy1zdXJmYWNlLmhhcy1iYWNrZ3JvdW5kLFxuICAgIFtpZD1cInRlc3RpbW9uaWFsc1wiXSxcbiAgICAud3AtYmxvY2stZ3JvdXAubmZkLWNvbnRhaW5lci5uZmQtYmctc3VyZmFjZS5uZmQtcC1sZyB7XG4gICAgICAgIGp1c3RpZnktc2VsZjogY2VudGVyO1xuICAgIH1cbn1cblxuLnNjX2xheW91dHNfdGl0bGVfYnJlYWRjcnVtYnMge1xuICAgIGRpc3BsYXk6IG5vbmU7XG59XG5cbi53cC1ibG9jay1oZWFkaW5nLmhhcy10ZXh0LWFsaWduLWNlbnRlciB7XG4gICAgcGFkZGluZzogMCAxLjYxOHJlbTtcbn1cblxuLndwLWJsb2NrLWdyb3VwICsgLndwLWJsb2NrLWJ1dHRvbnMge1xuICAgIG1hcmdpbi10b3A6IDEuNjE4cmVtO1xufVxuXG4vKiBjb2xsZWN0aW9uIG9mIGNlcnRpZmljYXRpb25zIGF0IHRoZSBib3R0b20gb2YgdGhlIHBhZ2U7IG5lZWQgdG8ga2VlcCBpbWFnZXMgZnJvbSBiZWluZyBjdXQgb2ZmLiB3YXMgc2V0IHRvIG5vcm1hbCwgd2hpY2ggc3RyZXRjaGVkICovXG5cbmZpZ3VyZS53cC1ibG9jay1nYWxsZXJ5Lmhhcy1uZXN0ZWQtaW1hZ2VzLndwLWJsb2NrLWdhbGxlcnktaXMtbGF5b3V0LWZsZXgge1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi8qIGltYWdlIGNlcnRpZmljYXRpb25zIG9uIHRoZSBob21lcGFnZS4gVGhleSdyZSBnZXR0aW5nIHdpZHRoIHNldCBhcyBpbmxpbmUgc3R5bGUuIHVnaC4gICovXG4ud3AtYmxvY2stZ2FsbGVyeS5oYXMtbmVzdGVkLWltYWdlcy5pcy1jcm9wcGVkIGZpZ3VyZS53cC1ibG9jay1pbWFnZTpub3QoI2luZGl2aWR1YWwtaW1hZ2UpIGltZyB7XG4gICAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcbn1cblxuXG5cbm1hcmsuaGFzLWlubGluZS1jb2xvciB7XG4gICAgcGFkZGluZzogLjYxOGVtO1xuICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XG59XG5cbi53cC1pbWFnZS0xOTYge1xuICAgIGNsaXAtcGF0aDogZWxsaXBzZSgxMDAlIDQ0JSBhdCA1MCUgNTYlKTtcbn0iXX0= */
