@@ -57,7 +57,8 @@
 /* attempt to override the font-sizes with... ugh. nesting. */
 body[class] {
     h1 {
-        font-size: var(--biggestTitleSize);
+        letter-spacing: -0.04ex; /* These lunatics set letter spacing to -.05em. 1: no; 2: FFS use something based on rendered typography */
+        font-size: var(--biggestTitleSize); 
     }
 
     h2 {
