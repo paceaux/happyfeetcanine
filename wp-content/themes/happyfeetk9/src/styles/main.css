@@ -87,6 +87,10 @@ body[class] {
     font-size: var(--biggerTitleSize) !important;
 }
 
+.has-medium-font-size[class] {
+    font-size: var(--bigTitleSize) !important;
+}
+
 .wp-block-group-is-layout-constrained {
     margin-right: var(--baseSpacingHorizontal);
     margin-left: var(--baseSpacingHorizontal);
