@@ -88,12 +88,18 @@ body[class] {
 }
 
 .has-medium-font-size[class] {
-    font-size: var(--bigTitleSize) !important;
+    font-size: var(--baseTitleSize) !important;
 }
 
 .wp-block-group-is-layout-constrained {
     margin-right: var(--baseSpacingHorizontal);
     margin-left: var(--baseSpacingHorizontal);
+}
+
+/*because of course groups get nested in groups*/
+.wp-block-group__inner-container.wp-block-group-is-layout-constrained {
+    margin-right: 0;
+    margin-left: 0;
 }
 
 h1.sc_layouts_title_caption {
