@@ -15,7 +15,13 @@
 
 :root {
     --baseSpacingHorizontal: 3vw;
+    --largeSpacingHorizontal: max(3vw, 3rem);
+    --largerSpacingHorizontal: calc(3vw + 1rem);
+    --largestSpacingHorizontal: calc(2vw + 2rem );
     --baseSpacingVertical: min(2vh, 2rem);
+    --largeSpacingVertical: max(2vh, 2rem);
+    --largerSpacingVertical: calc(2rem + 1vh);
+    --largestSpacingVertical: calc(2rem + 2vh);
 }
 
 .wp-block-group-is-layout-constrained {
@@ -74,8 +80,11 @@ mark.has-inline-color {
     margin-bottom: var(--baseSpacingVertical);
 }
 
-.content_wrap,
-.content_container {
+/* The dingleberries who wrote the original layout chose a max-width in their media query instead of a min-width. 
+so there's a stupid number of media queries. 
+*/
+.content_wrap[class][class],
+.content_container[class][class] {
     width: auto;
     margin: 0 var(--baseSpacingHorizontal);
 }
@@ -98,7 +107,13 @@ body:not(.expand_content):not(.body_style_fullwide):not(.body_style_fullscreen) 
     margin-left: var(--railSpace);
 }
 
+
+/* this is in the header. keeps stuff from going all the way to the edges*/
 .sc_layouts_row_type_compact {
     margin-right: var(--baseSpacingHorizontal);
     margin-left: var(--baseSpacingHorizontal);
+}
+
+.wp-block-group[class] {
+    margin-bottom: var(--baseSpacingVertical);
 }
