@@ -75,6 +75,10 @@ mark.has-inline-color {
     clip-path: ellipse(100% 44% at 50% 56%);
 }
 
+.wp-image-240 {
+    clip-path: ellipse(44% 100% at 44% 55%);
+}
+
 /* PAGE FIXES: ABOUT US*/
 .top_panel {
     margin-bottom: var(--baseSpacingVertical);
@@ -99,14 +103,6 @@ body:not(.expand_content):not(.body_style_fullwide):not(.body_style_fullscreen) 
 .footer_wrap {
     margin-top: 1.618rem;
 }
-
-.wp-block-group-is-layout-constrained {
-    --railSpace: calc(33% / 4);
-
-    margin-right: var(--railSpace);
-    margin-left: var(--railSpace);
-}
-
 
 /* this is in the header. keeps stuff from going all the way to the edges*/
 .sc_layouts_row_type_compact {
