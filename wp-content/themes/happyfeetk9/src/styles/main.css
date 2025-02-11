@@ -13,9 +13,14 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
+:root {
+    --baseSpacingHorizontal: 3vw;
+    --baseSpacingVertical: min(2vh, 2rem);
+}
+
 .wp-block-group-is-layout-constrained {
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-right: var(--baseSpacingHorizontal);
+    margin-left: var(--baseSpacingHorizontal);
 }
 
 h1.sc_layouts_title_caption {
@@ -62,4 +67,38 @@ mark.has-inline-color {
 
 .wp-image-196 {
     clip-path: ellipse(100% 44% at 50% 56%);
+}
+
+/* PAGE FIXES: ABOUT US*/
+.top_panel {
+    margin-bottom: var(--baseSpacingVertical);
+}
+
+.content_wrap,
+.content_container {
+    width: auto;
+    margin: 0 var(--baseSpacingHorizontal);
+}
+
+/* Width for ... content containers. Unfortunately because idiots wrote this who don't know how :not() works, we have to keep this exact specificity */
+/* stylelint-disable-next-line selector-not-notation */
+body:not(.expand_content):not(.body_style_fullwide):not(.body_style_fullscreen) .content {
+    width: 67vw;
+}
+
+/* Why in God's name does the global footer have 10.5 rem of margin? */
+.footer_wrap {
+    margin-top: 1.618rem;
+}
+
+.wp-block-group-is-layout-constrained {
+    --railSpace: calc(33% / 4);
+
+    margin-right: var(--railSpace);
+    margin-left: var(--railSpace);
+}
+
+.sc_layouts_row_type_compact {
+    margin-right: var(--baseSpacingHorizontal);
+    margin-left: var(--baseSpacingHorizontal);
 }
