@@ -22,6 +22,68 @@
     --largeSpacingVertical: max(2vh, 2rem);
     --largerSpacingVertical: calc(2rem + 1vh);
     --largestSpacingVertical: calc(2rem + 2vh);
+
+    /*===== 
+    #LineHeight #Variables
+=====*/
+    --baseLineHeight: 1.618;
+    --smallLineHeight: 1.2;
+
+    /*===== 
+    #Body #Size #Paragraph #content-flow #Variables
+=====*/
+    --biggestTextSize: 1.3em;
+    --biggerTextSize: 1.2em;
+    --bigTextSize: 1.1em;
+    --baseTextSize: 1em;
+    --smallTextSize: .8em;
+    --smallerTextSize: .75em;
+    --smallestTextSize: .618em;
+
+    /*===== 
+    #Heading #Title #Size #Variables
+    The small title sizes use the big text sizes; so they overlap
+    They're here, though, so that, if desired, we can deviate and not have them overlap
+=====*/
+    --biggestTitleSize: 5em;
+    --biggerTitleSize: 3.35em;
+    --bigTitleSize: 2.24em;
+    --baseTitleSize: 1.5em;
+    --smallTitleSize: var(--biggestTextSize);
+    --smallerTitleSize: var(--biggerTextSize);
+    --smallestTitleSize: var(--bigTextSize);
+}
+
+/* attempt to override the font-sizes with... ugh. nesting. */
+body[class] {
+    h1 {
+        font-size: var(--biggestTitleSize);
+    }
+
+    h2 {
+        font-size: var(--biggerTitleSize);
+    }
+
+    h3 {
+        font-size: var(--bigTitleSize);
+    }
+
+    h4 {
+        font-size: var(--baseTitleSize);
+    }
+
+    h5 {
+        font-size: var(--smallTitleSize);
+    }
+
+    h6 {
+        font-size: var(--smallerTitleSize);
+    }
+}
+
+/* knuckleheads who do knucklehead things get knuckle sandwiches */
+.has-large-font-size[class] {
+    font-size: var(--biggerTitleSize) !important;
 }
 
 .wp-block-group-is-layout-constrained {
