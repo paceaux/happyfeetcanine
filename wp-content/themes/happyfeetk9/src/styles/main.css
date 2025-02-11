@@ -71,12 +71,17 @@ mark.has-inline-color {
     border-radius: 10px;
 }
 
+[class*="wp-image"] {
+    --clipPathEllipseHorizontal: ellipse(44% 100% at 44% 55%);
+    --clipPathEllipseVertical: ellipse(100% 44% at 50% 56%);
+}
+
 .wp-image-196 {
-    clip-path: ellipse(100% 44% at 50% 56%);
+    clip-path: var(--clipPathEllipseVertical);
 }
 
 .wp-image-240 {
-    clip-path: ellipse(44% 100% at 44% 55%);
+    clip-path: var(--clipPathEllipseHorizontal);
 }
 
 /* PAGE FIXES: ABOUT US*/
