@@ -94,8 +94,15 @@ so there's a stupid number of media queries.
 */
 .content_wrap[class][class],
 .content_container[class][class] {
-    width: auto;
-    margin: 0 var(--baseSpacingHorizontal);
+    width: 100vw;
+}
+
+@media screen and (width > 768px) {
+    .content_wrap[class][class],
+    .content_container[class][class] {
+        width: auto;
+        margin: 0 var(--baseSpacingHorizontal);
+    }
 }
 
 /* Width for ... content containers. Unfortunately because idiots wrote this who don't know how :not() works, we have to keep this exact specificity */
