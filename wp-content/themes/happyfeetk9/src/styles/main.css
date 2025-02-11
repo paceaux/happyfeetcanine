@@ -45,10 +45,10 @@
     The small title sizes use the big text sizes; so they overlap
     They're here, though, so that, if desired, we can deviate and not have them overlap
 =====*/
-    --biggestTitleSize: 5em;
-    --biggerTitleSize: 3.35em;
-    --bigTitleSize: 2.24em;
-    --baseTitleSize: 1.5em;
+    --biggestTitleSize: 5rem;
+    --biggerTitleSize: 3.35rem;
+    --bigTitleSize: 2.24rem;
+    --baseTitleSize: 1.5rem;
     --smallTitleSize: var(--biggestTextSize);
     --smallerTitleSize: var(--biggerTextSize);
     --smallestTitleSize: var(--bigTextSize);
