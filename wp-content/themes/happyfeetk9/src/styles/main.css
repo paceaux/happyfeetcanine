@@ -52,6 +52,8 @@
     --smallTitleSize: var(--biggestTextSize);
     --smallerTitleSize: var(--biggerTextSize);
     --smallestTitleSize: var(--bigTextSize);
+
+    --baseColorWarm: #a00404;
 }
 
 /* attempt to override the font-sizes with... ugh. nesting. */
@@ -197,4 +199,9 @@ body:not(.expand_content):not(.body_style_fullwide):not(.body_style_fullscreen) 
 
 .wp-block-group[class] {
     margin-bottom: var(--baseSpacingVertical);
+}
+
+
+.scheme_default .sc_layouts_title_caption {
+    color: var(--baseColorWarm);
 }
